@@ -1,0 +1,26 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORM BUILDER</title>
+   <link
+    rel="stylesheet"
+    href="https://unpkg.com/survey-core@1.9.124/modern.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/survey-creator-core@1.9.124/survey-creator-core.min.css"
+  />
+  </head>
+  <body>
+    <div id="root"></div>
+     <script>
+    window.Survey = window.Survey || {};
+    window.Survey.StylesManager && window.Survey.StylesManager.applyTheme("modern");
+  </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
