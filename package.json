@@ -2,10 +2,11 @@
   "name": "formbuilder",
   "version": "1.0.0",
   "description": "",
- "scripts": {
+"scripts": {
   "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend && cp -r frontend/dist backend/",
   "start": "npm run start --prefix backend"
-},
+}
+,
   "author": "",
   "license": "ISC"
 }
