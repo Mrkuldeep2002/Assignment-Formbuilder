@@ -28,7 +28,7 @@ function App() {
     }
   />
   <Route
-    path="/admin/create"
+    path="/create"
     element={
       <ProtectedRoute>
         <CreateForm />
