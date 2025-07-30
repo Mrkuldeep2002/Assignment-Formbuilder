@@ -31,7 +31,7 @@ const AdminPanel = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this form?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/forms/${id}`);
+        await axios.delete(`/api/forms/${id}`);
         fetchForms(); // Refresh list
         toast.success("Form deleted successfully!", {
           duration: 3000,
