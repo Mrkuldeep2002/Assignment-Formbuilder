@@ -12,7 +12,7 @@ const FormFill = () => {
   useEffect(() => {
     const fetchForm = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/forms/${formId}`);
+        const res = await axios.get(`/api/forms/${formId}`);
         setForm(res.data);
         setLoading(false);
       } catch (err) {
