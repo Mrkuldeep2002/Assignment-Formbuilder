@@ -74,11 +74,11 @@ const FormBuilder = () => {
 
       let res;
       if (formId) {
-        res = await axios.put(`http://localhost:5000/api/forms/${formId}`, payload);
+        res = await axios.put(`/api/forms/${formId}`, payload);
         toast.success("Form updated successfully!");
         navigate(`/admin`);
       } else {
-        res = await axios.post("http://localhost:5000/api/forms", payload);
+        res = await axios.post("/api/forms", payload);
         toast.success("New form saved successfully!");
         navigate(`/admin`);
       }
