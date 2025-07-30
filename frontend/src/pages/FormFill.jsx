@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "../axios";
 import toast from "react-hot-toast";
 
@@ -8,6 +8,8 @@ const FormFill = () => {
   const [form, setForm] = useState(null);
   const [responses, setResponses] = useState({});
   const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
+
 
   useEffect(() => {
     const fetchForm = async () => {
@@ -35,6 +37,8 @@ const FormFill = () => {
         answers: responses,
       });
       toast.success("Form submitted successfully!");
+              navigate(`/`);
+
     } catch (err) {
       console.error("Submission error:", err);
       toast.error("Failed to submit form.");
