@@ -29,7 +29,7 @@ const FormBuilder = () => {
   useEffect(() => {
     if (formId) {
       axios
-        .get(`http://localhost:5000/api/forms/${formId}`)
+        .get(`/api/forms/${formId}`)
         .then((res) => {
           setFormTitle(res.data.title);
           setFormElements(res.data.elements);
