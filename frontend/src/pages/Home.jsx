@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import axios from "../axios";
 
 const Home = () => {
   const [forms, setForms] = useState([]);
@@ -8,7 +8,7 @@ const Home = () => {
   useEffect(() => {
     const fetchForms = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/forms");
+        const res = await axios.get("/api/forms");
         setForms(res.data);
       } catch (err) {
         console.error("Error fetching forms:", err);

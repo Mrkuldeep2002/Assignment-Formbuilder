@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import axios from "../axios";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
@@ -13,7 +13,7 @@ const AdminPanel = () => {
 
   const fetchForms = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/forms");
+      const res = await axios.get("/api/forms");
       setForms(res.data);
     } catch (err) {
       console.error("Error fetching forms:", err);
